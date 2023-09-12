@@ -1,0 +1,14 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Work
+  order: 3
+---
+<h1>Featured Work</h1>
+
+<p>A selection of my design and development work for your perusal.</p>
+
+{% set postslist = collections.featuredWork %}
+{% include "postslist.njk" %}
+
+<a href="/work">Work archive →</a>

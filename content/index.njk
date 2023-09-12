@@ -5,9 +5,19 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
+{# <h1>I craft experiences</h1> #}
+{# <h1>Craft & Experience</h1> #}
+<h1>Design & Execution</h1>
+<p>I'm Graham, a product design leader based on Dublin, Ireland where I solve problems, lead teams and craft experiences that deliver <em>outcomes</em>.</p>
+
+<h2>Featured work</h2>
+
+{% set postslist = collections.featuredWork %}
+{% include "postslist.njk" %}
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h2>Latest from the blog</h2>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -15,7 +25,7 @@ numberOfLatestPostsToShow: 3
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+<p><a href="/blog/">More from the blog</a></p>
 {% endif %}
 
 {# List every content page in the project #}

@@ -37,6 +37,12 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 
+	eleventyConfig.addCollection("featuredWork", function(collectionApi) {
+    // get unsorted items
+    return collectionApi.getFilteredByTag("work")
+			.filter(post => post.data.featured);
+  });
+
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
