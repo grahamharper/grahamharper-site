@@ -5,29 +5,32 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
-{# <h1>I craft experiences</h1> #}
-{# <h1>Craft & Experience</h1> #}
-<h1>Design & Execution</h1>
-<p>I'm Graham, a product design leader based on Dublin, Ireland where I solve problems, lead teams and craft experiences that deliver <em>outcomes</em>.</p>
 
+<h1 class="hero">
+    <div class="portrait">
+        {% image "../public/img/graham.jpg", "Portrait of Graham Harper" %}
+    </div>
+    Graham Harper is a Product Design Lead based in Dublin, Ireland.</h1>
+<p class="lede">I'm passionate about using design and technology to improve peoples lives. I specialise in design
+    systems, strategy and crafting user experiences that solve problems in complex environments to drive exceptional
+    outcomes.</p>
+<p>Currently I'm Principal Designer at
+    <a href="https://www.merative.com/curam">Cúram by Merative</a>, where I lead the design team transforming the delivery of government social services.</p>
 <h2>Featured work</h2>
-
 {% set postslist = collections.featuredWork %}
-{% include "postslist.njk" %}
-
+{% include "projectlist.njk" %}
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h2>Latest from the blog</h2>
-
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
 {% include "postslist.njk" %}
-
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p><a href="/blog/">More from the blog</a></p>
+    <p>
+        <a href="/blog/">More from the blog →</a>
+    </p>
 {% endif %}
-
 {# List every content page in the project #}
 {#
 <ul>

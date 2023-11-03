@@ -1,0 +1,19 @@
+{%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}
+<ol reversed class="projectlist grid" role="list">
+    {% for post in postslist | reverse %}
+        <li class="projectlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+            <a href="{{ post.url }}" class="postlist-link">
+                {% if post.data.image and post.data.image_alt %}
+                    {% set imgsrc = post.data.image | postImageUrl(post.inputPath) %}
+                    {% image imgsrc, post.data.image_alt %}
+                {% endif %}
+                {% if post.data.title %}
+                    {{ post.data.title }}
+                {% else %}
+                    <code>{{ post.url }}</code>
+                {% endif %}
+            </a>
+            <p class="postlist-description">{{ post.data.description }}</p>
+        </li>
+    {% endfor %}
+</ol></li></li>

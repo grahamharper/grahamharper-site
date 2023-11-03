@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/page.njk
 eleventyNavigation:
   key: About
   order: 4
@@ -7,12 +7,26 @@ eleventyNavigation:
 
 # About
 
+<div class="portrait">
+
+{% image "../../public/img/graham.jpg", "Portrait of Graham Harper" %}
+
+</div>
+
 Hi 👋<br>
-I'm Graham, an experienced design leader based in Dublin, Ireland and specialize in designing products, leading teams and solving problems. With a strong background in both design and development, I bridge the gap between intent and execution. I'm driven by solving real, human problems and delivering exceptional outcomes.
+I'm Graham, a design lead based in Dublin, Ireland.
+
+I'm passionate about using design and technology to meaningfully improve peoples lives. I specialise in design systems, strategy and crafting user experiences that solve problems in complex environments, driving exceptional outcomes.
+
+Currently I'm Principal Designer at [Cúram by Merative](https://www.merative.com/curam), where I lead the design team transforming the delivery of government social services.
 
 ## My Journey
 
-My journey in the world of design and development began with a deep fascination for technology and its potential to drive positive change. Over the years, I have had the privilege of working with some of the most vulnerable people in our society. It's this experience that has inspired me to use design and technology to improve peoples lives.
+My journey in the world of design began with a deep fascination for technology and its potential to drive positive change. Over the years, I have had the privilege of working with some of the most vulnerable people in our society. It's this experience that has inspired me to use design and technology to improve peoples lives.
+
+Throughout my career as a designer I have maintained a balance of skills across design and web development, letting each discipline inform and enhance the other. It is this intersection of skills that enables me to bridge the gap between designers and developers, intent and execution. Design Systems are where these skills manifest.
+
+More recently my focus has shifted from design output to driving positive _outcomes_, by solving problems for humans through design.
 
 ## Work
 

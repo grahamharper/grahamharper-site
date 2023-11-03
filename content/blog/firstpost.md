@@ -24,3 +24,24 @@ Capitalize on low hanging fruit to identify a ballpark value added activity to b
  // Test with a line break above this line.
  console.log('Test');
 ```
+
+```css
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+
+@font-face {
+	src: url(https://lea.verou.me/logo.otf);
+	font-family: 'LeaVerou';
+}
+
+/*
+ Shared styles
+ */
+
+section h1,
+#features li strong,
+header h2,
+footer p {
+	font: 100% Rockwell, Arvo, serif;
+}
+```
